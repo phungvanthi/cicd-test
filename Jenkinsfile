@@ -36,12 +36,11 @@ pipeline {
     stage('Deploy') {
       steps {
         script {
-          withCredentials([sshUserPrivateKey(
-            credentialsId: 'ssh',
-            keyFileVariable: 'identityFile',
-            passphraseVariable: 'Vsolu@2018',
-            usernameVariable: 'root'
-          )]) {
+          withCredentials([
+            usernamePassword(credentialsId: 'ssh',
+              usernameVariable: 'root',
+              passwordVariable: 'Vsolu@2018')
+          ]) {
             def remote = [:]
             remote.name = 'server'
             remote.host = FRONTEND_SERVER
