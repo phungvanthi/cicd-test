@@ -3,7 +3,7 @@ pipeline {
   environment {
     FRONTEND_GIT = 'https://github.com/sontung0/tutorial-jenkins-frontend.git'
     FRONTEND_BRANCH = 'master'
-    FRONTEND_IMAGE = 'vsolu/tutorial-jenkins-frontend'
+    FRONTEND_IMAGE = 'sontung0/tutorial-jenkins-frontend'
     FRONTEND_SERVER = 'localhost'
     FRONTEND_SERVER_DIR = './app'
   }
