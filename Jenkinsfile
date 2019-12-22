@@ -38,8 +38,8 @@ pipeline {
         script {
           withCredentials([
             usernamePassword(credentialsId: 'ssh',
-              usernameVariable: 'root',
-              passwordVariable: 'Vsolu@2018')
+              usernameVariable: 'login',
+              passwordVariable: 'Password')
           ]) {
             def remote = [:]
             remote.name = 'server'
