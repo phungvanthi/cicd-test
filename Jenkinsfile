@@ -3,7 +3,7 @@ pipeline {
   environment {
     FRONTEND_GIT = 'https://github.com/sontung0/tutorial-jenkins-frontend.git'
     FRONTEND_BRANCH = 'master'
-    FRONTEND_IMAGE = 'sontung0/tutorial-jenkins-frontend'
+    FRONTEND_IMAGE = 'devlancer/vsolu'
     FRONTEND_SERVER = 'localhost'
     FRONTEND_SERVER_DIR = './app'
   }
@@ -26,7 +26,7 @@ pipeline {
       steps {
         unstash 'frontend'
         script {
-          docker.withRegistry('', 'docker-hub') {
+          docker.withRegistry('', 'dockerhub') {
             def image = docker.build(FRONTEND_IMAGE)
             image.push(BUILD_ID)
           }
