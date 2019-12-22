@@ -38,7 +38,7 @@ pipeline {
         script {
           withCredentials([
             usernamePassword(credentialsId: 'ssh',
-              usernameVariable: 'user',
+              usernameVariable: 'username',
               passwordVariable: 'password')
           ]) {
             def remote = [:]
