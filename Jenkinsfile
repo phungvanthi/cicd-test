@@ -45,6 +45,7 @@ pipeline {
             remote.name = 'server'
             remote.host = FRONTEND_SERVER
             remote.user = user
+            remote.password = password
             //remote.identityFile = identityFile
             remote.allowAnyHosts = true
 
