@@ -5,7 +5,7 @@ pipeline {
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'devlancer/vsolu'
     FRONTEND_SERVER = '192.168.1.111'
-    FRONTEND_SERVER_DIR = './app'
+    FRONTEND_SERVER_DIR = '/app'
   }
   stages {
     stage('Build JS') {
