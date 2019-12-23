@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    FRONTEND_GIT = 'https://github.com/sontung0/tutorial-jenkins-frontend.git'
+    FRONTEND_GIT = 'https://github.com/phungvanthi/fe-code-test.git'
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'devlancer/vsolu'
     FRONTEND_SERVER = '192.168.1.111'
