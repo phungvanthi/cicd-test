@@ -5,7 +5,7 @@ pipeline {
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'devlancer/vsolu'
     FRONTEND_SERVER = 'localhost'
-    FRONTEND_SERVER_DIR = './app'
+    FRONTEND_SERVER_DIR = '/app'
   }
   stages {
     stage('Build JS') {
@@ -38,7 +38,7 @@ pipeline {
         script {
           withCredentials([sshUserPrivateKey(
             credentialsId: 'ssh',
-            keyFileVariable: 'identityFile',
+            keyFileVariable: 'id_rsa',
             passphraseVariable: '',
             usernameVariable: 'user'
           )]) {
