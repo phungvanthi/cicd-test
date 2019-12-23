@@ -4,7 +4,7 @@ pipeline {
     FRONTEND_GIT = 'https://github.com/sontung0/tutorial-jenkins-frontend.git'
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'devlancer/vsolu'
-    FRONTEND_SERVER = 'localhost'
+    FRONTEND_SERVER = '192.168.1.111'
     FRONTEND_SERVER_DIR = '/app'
   }
   stages {
