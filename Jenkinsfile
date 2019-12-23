@@ -38,7 +38,7 @@ pipeline {
         script {
           withCredentials([sshUserPrivateKey(
             credentialsId: 'ssh',
-            keyFileVariable: 'id_rsa',
+            keyFileVariable: 'identityFile',
             passphraseVariable: '',
             usernameVariable: 'user'
           )]) {
