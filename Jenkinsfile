@@ -46,8 +46,7 @@ pipeline {
             remote.name = 'server'
             remote.host = FRONTEND_SERVER
             remote.user = user
-            remote.password = password
-            //remote.identityFile = identityFile
+            remote.identityFile = identityFile
             remote.allowAnyHosts = true
 
             sshCommand remote: remote, command: "cd $FRONTEND_SERVER_DIR && export FRONTEND_IMAGE=$FRONTEND_IMAGE:$BUILD_ID && docker-compose up -d"
